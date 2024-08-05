@@ -11,8 +11,8 @@ export class DataService {
   private subDataService: SubDataService;
 
   private data: { [key: string]: any } = {
-    site1: { message: 'Data for Site 1' },
-    site2: { message: 'Data for Site 2' },
+    site1: { message: 'Data for Site 1' + Math.random() },
+    site2: { message: 'Data for Site 2' + Math.random() },
   };
 
   constructor(@Inject(SITE_ID) private siteId: string, private siteServiceFactory: SiteServiceFactory) {
